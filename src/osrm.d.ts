@@ -103,102 +103,102 @@ export interface components {
              * Format: float
              * @description The distance traveled by the route, in float meters.
              */
-            distance?: number;
+            distance: number;
             /**
              * Format: float
              * @description The estimated travel time, in float number of seconds.
              */
-            duration?: number;
-            geometry?: Record<string, never>;
+            duration: number;
+            geometry: Record<string, never>;
             /** Format: float */
-            weight?: number;
-            weight_name?: string;
-            legs?: components["schemas"]["RouteLeg"][];
+            weight: number;
+            weight_name: string;
+            legs: components["schemas"]["RouteLeg"][];
         };
         RouteLeg: {
             /**
              * Format: float
              * @description The distance traveled by the route, in float meters.
              */
-            distance?: number;
+            distance: number;
             /**
              * Format: float
              * @description The estimated travel time, in float number of seconds.
              */
-            duration?: number;
+            duration: number;
             /** Format: float */
-            weight?: number;
-            summary?: string;
-            steps?: components["schemas"]["RouteStep"][];
-            annotation?: components["schemas"]["Annotation"];
+            weight: number;
+            summary: string;
+            steps: components["schemas"]["RouteStep"][];
+            annotation: components["schemas"]["Annotation"];
         };
         RouteStep: {
             /**
              * Format: float
              * @description The distance traveled by the route, in float meters.
              */
-            distance?: number;
+            distance: number;
             /**
              * Format: float
              * @description The estimated travel time, in float number of seconds.
              */
-            duration?: number;
-            geometry?: Record<string, never>;
+            duration: number;
+            geometry: Record<string, never>;
             /** Format: float */
-            weight?: number;
-            name?: string;
-            ref?: string;
-            pronunciation?: string;
-            destinations?: Record<string, never>;
-            exits?: Record<string, never>;
-            mode?: string;
-            maneuver?: components["schemas"]["StepManeuver"];
-            intersections?: components["schemas"]["Intersection"][];
-            rotary_name?: string;
-            rotary_pronunciation?: string;
+            weight: number;
+            name: string;
+            ref: string;
+            pronunciation: string;
+            destinations: Record<string, never>;
+            exits: Record<string, never>;
+            mode: string;
+            maneuver: components["schemas"]["StepManeuver"];
+            intersections: components["schemas"]["Intersection"][];
+            rotary_name: string;
+            rotary_pronunciation: string;
             /** @enum {string} */
-            driving_side?: "left" | "right";
+            driving_side: "left" | "right";
         };
         Annotation: {
             /** @description The distance, in metres, between each pair of coordinates */
-            distance?: number[];
+            distance: number[];
             /** @description The duration between each pair of coordinates, in seconds */
-            duration?: number[];
-            datasources?: number[];
-            nodes?: number[];
-            weight?: number[];
-            speed?: number[];
-            metadata?: {
-                datasource_names?: string[];
+            duration: number[];
+            datasources: number[];
+            nodes: number[];
+            weight: number[];
+            speed: number[];
+            metadata: {
+                datasource_names: string[];
             };
         };
         StepManeuver: {
-            location?: number[];
-            bearing_before?: number;
-            bearing_after?: number;
-            type?: string;
-            modifier?: string;
-            exit?: number;
+            location: number[];
+            bearing_before: number;
+            bearing_after: number;
+            type: string;
+            modifier: string;
+            exit: number;
         };
         Intersection: {
-            location?: number[];
-            bearings?: number[];
-            classes?: string[];
-            entry?: Record<string, never>[];
-            in?: number;
-            out?: number;
-            lanes?: components["schemas"]["Lane"][];
+            location: number[];
+            bearings: number[];
+            classes: string[];
+            entry: Record<string, never>[];
+            in: number;
+            out: number;
+            lanes: components["schemas"]["Lane"][];
         };
         Lane: {
-            indications?: string[];
-            valid?: boolean;
+            indications: string[];
+            valid: boolean;
         };
         Waypoint: {
-            name?: string;
-            location?: number[];
+            name: string;
+            location: number[];
             /** Format: float */
-            distance?: number;
-            hint?: string;
+            distance: number;
+            hint: string;
         };
         NearestWaypoint: components["schemas"]["Waypoint"] & {
             nodes?: number[];

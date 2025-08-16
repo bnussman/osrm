@@ -4,7 +4,7 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "generate": "openapi-typescript ./osrm-openapi.yaml -o ./src/osrm.d.ts"
+    "generate": "openapi-typescript ./osrm-openapi.yaml --properties-required-by-default -o ./src/osrm.d.ts"
   },
   "devDependencies": {
     "@types/bun": "latest"
