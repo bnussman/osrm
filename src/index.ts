@@ -5,20 +5,16 @@ export const client = createClient<paths>({
   baseUrl: "https://osrm.ridebeep.app/",
 });
 
-const { data: route, error } = await client.GET(
-  "/route/{version}/{profile}/{coordinates}",
-  {
-    params: {
-      path: {
-        coordinates:
-          "-81.6538314,36.2221064;-80.75991097845207,35.08197829130579",
-        profile: "driving",
-        version: "v1",
-      },
-    },
-  },
-);
-
-if (route) {
-  console.log(route.waypoints);
-}
+// const { data: route, error } = await client.GET(
+//   "/route/{version}/{profile}/{coordinates}",
+//   {
+//     params: {
+//       path: {
+//         coordinates:
+//           "-81.6538314,36.2221064;-80.75991097845207,35.08197829130579",
+//         profile: "driving",
+//         version: "v1",
+//       },
+//     },
+//   },
+// );

@@ -83,8 +83,8 @@ export interface components {
             waypoints?: components["schemas"]["NearestWaypoint"][];
         };
         RouteResponse: components["schemas"]["ApiResponse"] & {
-            waypoints?: components["schemas"]["Waypoint"][];
-            routes?: components["schemas"]["Route"][];
+            waypoints: components["schemas"]["Waypoint"][];
+            routes: components["schemas"]["Route"][];
         };
         TableResponse: components["schemas"]["ApiResponse"] & {
             /** @description array of arrays that stores the matrix in row-major order. durations[i][j] gives the travel time from the i-th waypoint to the j-th waypoint. Values are given in seconds. */

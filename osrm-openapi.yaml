@@ -477,6 +477,9 @@ components:
               type: array
               items:
                 $ref: "#/components/schemas/Route"
+          required:
+            - waypoints
+            - routes
     TableResponse:
       allOf:
         - $ref: "#/components/schemas/ApiResponse"
