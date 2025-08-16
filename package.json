@@ -1,0 +1,16 @@
+{
+  "name": "osrm",
+  "module": "index.ts",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "generate": "openapi-typescript ./osrm-openapi.yaml -o ./src/osrm.d.ts"
+  },
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5",
+    "openapi-fetch": "^0.14.0"
+  }
+}
