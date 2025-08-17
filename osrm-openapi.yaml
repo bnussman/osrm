@@ -539,7 +539,7 @@ components:
           format: float
           description: The estimated travel time, in float number of seconds.
         geometry:
-          type: object
+          type: string
         weight:
           type: number
           format: float
@@ -583,7 +583,7 @@ components:
           format: float
           description: The estimated travel time, in float number of seconds.
         geometry:
-          type: object
+          type: string
         weight:
           type: number
           format: float

@@ -109,7 +109,7 @@ export interface components {
              * @description The estimated travel time, in float number of seconds.
              */
             duration: number;
-            geometry: Record<string, never>;
+            geometry: string;
             /** Format: float */
             weight: number;
             weight_name: string;
@@ -143,7 +143,7 @@ export interface components {
              * @description The estimated travel time, in float number of seconds.
              */
             duration: number;
-            geometry: Record<string, never>;
+            geometry: string;
             /** Format: float */
             weight: number;
             name: string;
