@@ -3,7 +3,7 @@
 
 A TypeScript client for the [osrm-backend](https://github.com/Project-OSRM/osrm-backend) REST API.
 
-Thank you to [1papaya/osrm-openapi](https://github.com/1papaya/osrm-openapi) for providing the LO`osrm-openapi.yaml` file.
+Thank you to [1papaya/osrm-openapi](https://github.com/1papaya/osrm-openapi) for providing the `osrm-openapi.yaml` file.
 
 ## Install
 
