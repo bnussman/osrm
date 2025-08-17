@@ -14,7 +14,7 @@ bun add @banksnussman/osrm
 ## Usege
 
 ```typescript
-import { OSRM } from '@banksnussman/osrm';
+import { osrm } from '@banksnussman/osrm';
 
 const { data: route, error } = await osrm.GET(
   "/route/{version}/{profile}/{coordinates}",
