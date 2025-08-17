@@ -13,5 +13,9 @@
   },
   "dependencies": {
     "openapi-fetch": "^0.14.0"
-  }
+  },
+  "files": [
+    "src",
+    "package.json"
+  ]
 }
