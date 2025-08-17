@@ -11,7 +11,7 @@ Thank you to [1papaya/osrm-openapi](https://github.com/1papaya/osrm-openapi) for
 bun add @banksnussman/osrm
 ```
 
-## Usege
+## Usage
 
 ```typescript
 import { osrm } from '@banksnussman/osrm';
