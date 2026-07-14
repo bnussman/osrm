@@ -1,6 +1,5 @@
 # `@banksnussman/osrm`
 
-
 A TypeScript client for the [osrm-backend](https://github.com/Project-OSRM/osrm-backend) REST API.
 
 Thank you to [1papaya/osrm-openapi](https://github.com/1papaya/osrm-openapi) for providing the `osrm-openapi.yaml` file.
@@ -14,21 +13,15 @@ bun add @banksnussman/osrm
 ## Usage
 
 ```typescript
-import { osrm } from '@banksnussman/osrm';
+import { route } from '@banksnussman/osrm';
 
-const { data: route, error } = await osrm.GET(
-  "/route/{version}/{profile}/{coordinates}",
-  {
-    params: {
-      path: {
-        coordinates:
-          "-81.6538314,36.2221064;-80.75991097845207,35.08197829130579",
-        profile: "driving",
-        version: "v1",
-      },
-    },
+const { data: route, error } = await route({
+  path: {
+    coordinates: "-81.6538314,36.2221064;-80.75991097845207,30.75991097845207",
+    profile: "driving",
+    version: "v1",
   },
-);
+});
 
 console.log(route, error);
 ```
