@@ -5,7 +5,7 @@
     "type": "git",
     "url": "https://github.com/bnussman/osrm"
   },
-  "version": "0.0.3",
+  "version": "0.0.4",
   "scripts": {
     "generate": "openapi-ts",
     "build": "tsdown"

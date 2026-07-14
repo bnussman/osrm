@@ -11,7 +11,7 @@ export type ApiResponse = {
 };
 
 export type NearestResponse = ApiResponse & {
-    waypoints?: Array<NearestWaypoint>;
+    waypoints: Array<NearestWaypoint>;
 };
 
 export type RouteResponse = ApiResponse & {
@@ -23,132 +23,132 @@ export type TableResponse = ApiResponse & {
     /**
      * array of arrays that stores the matrix in row-major order. durations[i][j] gives the travel time from the i-th waypoint to the j-th waypoint. Values are given in seconds.
      */
-    durations?: Array<Array<number>>;
-    distances?: Array<Array<number>>;
-    sources?: Array<Waypoint>;
-    destinations?: Array<Waypoint>;
-    fallback_speed_cells?: Array<Array<number>>;
+    durations: Array<Array<number>>;
+    distances: Array<Array<number>>;
+    sources: Array<Waypoint>;
+    destinations: Array<Waypoint>;
+    fallback_speed_cells: Array<Array<number>>;
 };
 
 export type TripResponse = ApiResponse & {
-    waypoints?: Array<TripWaypoint>;
-    trips?: Array<Route>;
+    waypoints: Array<TripWaypoint>;
+    trips: Array<Route>;
 };
 
 export type Route = {
     /**
      * The distance traveled by the route, in float meters.
      */
-    distance?: number;
+    distance: number;
     /**
      * The estimated travel time, in float number of seconds.
      */
-    duration?: number;
-    geometry?: string;
-    weight?: number;
-    weight_name?: string;
-    legs?: Array<RouteLeg>;
+    duration: number;
+    geometry: string;
+    weight: number;
+    weight_name: string;
+    legs: Array<RouteLeg>;
 };
 
 export type RouteLeg = {
     /**
      * The distance traveled by the route, in float meters.
      */
-    distance?: number;
+    distance: number;
     /**
      * The estimated travel time, in float number of seconds.
      */
-    duration?: number;
-    weight?: number;
-    summary?: string;
-    steps?: Array<RouteStep>;
-    annotation?: Annotation;
+    duration: number;
+    weight: number;
+    summary: string;
+    steps: Array<RouteStep>;
+    annotation: Annotation;
 };
 
 export type RouteStep = {
     /**
      * The distance traveled by the route, in float meters.
      */
-    distance?: number;
+    distance: number;
     /**
      * The estimated travel time, in float number of seconds.
      */
-    duration?: number;
-    geometry?: string;
-    weight?: number;
-    name?: string;
-    ref?: string;
-    pronunciation?: string;
-    destinations?: {
+    duration: number;
+    geometry: string;
+    weight: number;
+    name: string;
+    ref: string;
+    pronunciation: string;
+    destinations: {
         [key: string]: unknown;
     };
-    exits?: {
+    exits: {
         [key: string]: unknown;
     };
-    mode?: string;
-    maneuver?: StepManeuver;
-    intersections?: Array<Intersection>;
-    rotary_name?: string;
-    rotary_pronunciation?: string;
-    driving_side?: 'left' | 'right';
+    mode: string;
+    maneuver: StepManeuver;
+    intersections: Array<Intersection>;
+    rotary_name: string;
+    rotary_pronunciation: string;
+    driving_side: 'left' | 'right';
 };
 
 export type Annotation = {
     /**
      * The distance, in metres, between each pair of coordinates
      */
-    distance?: Array<number>;
+    distance: Array<number>;
     /**
      * The duration between each pair of coordinates, in seconds
      */
-    duration?: Array<number>;
-    datasources?: Array<number>;
-    nodes?: Array<number>;
-    weight?: Array<number>;
-    speed?: Array<number>;
-    metadata?: {
-        datasource_names?: Array<string>;
+    duration: Array<number>;
+    datasources: Array<number>;
+    nodes: Array<number>;
+    weight: Array<number>;
+    speed: Array<number>;
+    metadata: {
+        datasource_names: Array<string>;
     };
 };
 
 export type StepManeuver = {
-    location?: Array<number>;
-    bearing_before?: number;
-    bearing_after?: number;
-    type?: string;
-    modifier?: string;
-    exit?: number;
+    location: Array<number>;
+    bearing_before: number;
+    bearing_after: number;
+    type: string;
+    modifier: string;
+    exit: number;
 };
 
 export type Intersection = {
-    location?: Array<number>;
-    bearings?: Array<number>;
-    classes?: Array<string>;
-    entry?: Array<unknown>;
-    in?: number;
-    out?: number;
-    lanes?: Array<Lane>;
+    location: Array<number>;
+    bearings: Array<number>;
+    classes: Array<string>;
+    entry: Array<unknown>;
+    in: number;
+    out: number;
+    lanes: Array<Lane>;
 };
 
 export type Lane = {
-    indications?: Array<string>;
-    valid?: boolean;
+    indications: Array<string>;
+    valid: boolean;
 };
 
 export type Waypoint = {
-    name?: string;
-    location?: Array<number>;
-    distance?: number;
-    hint?: string;
+    name: string;
+    location: Array<number>;
+    distance: number;
+    hint: string;
 };
 
 export type NearestWaypoint = Waypoint & {
-    nodes?: Array<number>;
+    nodes: Array<number>;
 };
 
 export type TripWaypoint = Waypoint & {
-    trips_index?: number;
-    waypoint_index?: number;
+    trips_index: number;
+    waypoint_index: number;
 };
 
 export type NearestData = {
